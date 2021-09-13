@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body, main, header h1{
+    margin: 0; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+               "Helvetica Neue", sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: rgb(197, 197, 197);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown {
+    border: grey solid 1px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+header nav {
+    display: flex;
+}
