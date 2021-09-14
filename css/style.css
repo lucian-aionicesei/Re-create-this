@@ -1,32 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=IBM+Plex+Sans+Arabic:wght@300&family=Merriweather+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=IBM+Plex+Sans+Arabic:wght@300&family=Merriweather+Sans:wght@300;700;800&display=swap');
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body, main, header h1{
-    margin: 0; 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-               "Helvetica Neue", sans-serif;
+:root{
+    --primary-font: 'Heebo', sans-serif;
+    --logo-font: 'Merriweather Sans', sans-serif;
+}
+
+body,
+main,
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid rgb(218, 218, 218);
+  padding: 0px 18px;
+  position: fixed;
+  width: 100%;
+}
+
+.searchbar {
+    width: auto;
+    height: 40px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 7px;
     display: flex;
-    background-color: rgb(197, 197, 197);
-    justify-content: space-between;
     align-items: center;
+    padding: 0px 15px;
+}
+
+.search_icon {
+    width: 20px;
+    color: rgb(95, 95, 95);
+    margin-right: 10px;
+}
+
+.searchbar input {
+    flex: 1;
+    height: 35px;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+}
+
+header h1 {
+    font-family: var(--logo-font);
+    text-transform: uppercase;
+    font-weight: 300;
+    justify-self: center;
+}
+
+header h1 span {
+    font-weight: 800;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 50px;
+  padding: 7px 18px;
+  margin: 10px 5px;
+  border: none;
+  font-family: var(--primary-font);
+  font-size: 16px;
+}
+
+.button_icon {
+    margin-right: 6px;
+}
+
+.red_button {
+  color: white;
+  background-color: rgb(194, 0, 0);
+  border: none;
 }
 
 .dropdown {
-    border: grey solid 1px;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+  border: grey solid 1px;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 0px 13px;
 }
 
 header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+}
+
+main {
+    padding-top: 59px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article {
+    width: 700px;
+    margin-top: 20px;
+}
+
+article img {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+}
+
+article h2, p{
+text-align: center;
+}
+
+article .recipe_label {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.recipe_label p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle_p {
+    border-left: 1px solid rgb(240, 240, 240);
+    border-right: 1px solid rgb(240, 240, 240);
 }
