@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind&family=IBM+Plex+Sans+Arabic:wght@300&family=Merriweather+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind&family=IBM+Plex+Sans+Arabic:wght@300&family=Merriweather+Sans:wght@300;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind&family=IBM+Plex+Sans+Arabic:wght@300&family=Merriweather+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind&family=IBM+Plex+Sans+Arabic:wght@300&family=Merriweather+Sans:wght@300;700;800&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
-:root{
-    --primary-font: 'Heebo', sans-serif;
-    --logo-font: 'Merriweather Sans', sans-serif;
+:root {
+  --primary-font: "Heebo", sans-serif;
+  --logo-font: "Merriweather Sans", sans-serif;
 }
 
 body,
@@ -16,8 +16,7 @@ main,
 header h1 {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: var(--primary-font);
 }
 
 header {
@@ -32,40 +31,40 @@ header {
 }
 
 .searchbar {
-    width: auto;
-    height: 40px;
-    background-color: rgb(240, 240, 240);
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    padding: 0px 15px;
+  width: auto;
+  height: 40px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
 }
 
 .search_icon {
-    width: 20px;
-    color: rgb(95, 95, 95);
-    margin-right: 10px;
+  width: 20px;
+  color: rgb(95, 95, 95);
+  margin-right: 10px;
 }
 
 .searchbar input {
-    flex: 1;
-    height: 35px;
-    font-family: var(--primary-font);
-    font-size: 16px;
-    border: none;
-    outline: none;
-    background-color: rgb(240, 240, 240);
+  flex: 1;
+  height: 35px;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: rgb(240, 240, 240);
 }
 
 header h1 {
-    font-family: var(--logo-font);
-    text-transform: uppercase;
-    font-weight: 300;
-    justify-self: center;
+  font-family: var(--logo-font);
+  text-transform: uppercase;
+  font-weight: 300;
+  justify-self: center;
 }
 
 header h1 span {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 button {
@@ -75,14 +74,14 @@ button {
   justify-items: center;
   border-radius: 50px;
   padding: 7px 18px;
-  margin: 10px 5px;
+  margin: 10px 10px 10px 0px;
   border: none;
   font-family: var(--primary-font);
   font-size: 16px;
 }
 
 .button_icon {
-    margin-right: 6px;
+  margin-right: 6px;
 }
 
 .red_button {
@@ -111,40 +110,101 @@ header nav {
 }
 
 main {
-    padding-top: 59px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding-top: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 3vw;
 }
 
 article {
-    width: 700px;
-    margin-top: 20px;
+  width: 650px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  margin-bottom: 5px;
 }
 
 article img {
-    display: block;
-    width: 100%;
-    border-radius: 3px;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
 }
 
-article h2, p{
-text-align: center;
+article h2,
+p {
+  text-align: center;
 }
 
 article .recipe_label {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-bottom: 1px solid rgb(240, 240, 240);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid rgb(240, 240, 240);
 }
 
 .recipe_label p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .middle_p {
-    border-left: 1px solid rgb(240, 240, 240);
-    border-right: 1px solid rgb(240, 240, 240);
+  border-left: 1px solid rgb(240, 240, 240);
+  border-right: 1px solid rgb(240, 240, 240);
+}
+
+section {
+  margin: 35px 0px 20px 0px;
+}
+
+section h3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0px;
+}
+
+.serves {
+  font-size: 15px;
+  background-color: rgb(240, 240, 240);
+  padding: 0px 10px;
+  border-radius: 50px;
+  color: grey;
+}
+
+section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: grey;
+}
+
+section li {
+  margin: 5px 0px;
+  font-size: 15px;
+}
+
+article nav {
+  display: flex;
+}
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.recommendationsList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
+  grid-gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommendations_tile img {
+  width: 100%;
+  height: auto;
 }
