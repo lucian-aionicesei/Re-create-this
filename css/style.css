@@ -119,7 +119,7 @@ main {
 }
 
 article {
-  width: 650px;
+  width: 700px;
   margin-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgb(240, 240, 240);
@@ -133,7 +133,7 @@ article img {
   border-radius: 3px;
 }
 
-article > h2 p {
+article > h2, p {
   text-align: center;
 }
 
@@ -196,6 +196,10 @@ article nav {
   width: 100%;
 }
 
+.recommendations h4{
+  font-size: 20px;
+}
+
 .recommendationsList {
   width: 100%;
   display: grid;
@@ -203,6 +207,7 @@ article nav {
   grid-gap: 1.5rem;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .recommendations_tile {
@@ -242,6 +247,7 @@ article nav {
 
 .tile_info p {
   margin: 0;
+  text-align: left;
 }
 
 .rating {
