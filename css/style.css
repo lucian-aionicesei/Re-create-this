@@ -6,6 +6,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -230,6 +231,13 @@ article nav {
   font-size: 20px;
 }
 
+.recommendations h4 a {
+  text-decoration: none;
+  color: grey;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
 .recommendationsList {
   width: 100%;
   display: grid;
@@ -296,7 +304,7 @@ article nav {
 footer {
   background-color: rgb(231, 231, 231);
   padding: 28px 5vw;
-  margin-top: 5vw;
+  margin-top: 40px;
 }
 
 .footer_menu {
@@ -353,8 +361,6 @@ footer li {
 }
 
 @media only screen and (max-width: 900px) {
-  header {
-  }
 
   .searchbar {
     background-color: transparent;
@@ -377,6 +383,15 @@ footer li {
     width: 90vw;
   }
 
+  article h2 {
+    font-size: 25px;
+  }
+
+  article section {
+    margin: 35px 3vw 20px 3vw;
+    font-family: var(--reading-font);
+  }
+
   .footer_menu {
     display: flex;
     flex-direction: column;
@@ -389,9 +404,3 @@ footer li {
     padding-bottom: 20px;
   }
 }
-
-/* @media only screen and (min-width: 941px) and (max-width: 1465px) {
-  main {
-    background-color: turquoise;
-  }
-} */
