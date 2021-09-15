@@ -51,7 +51,7 @@ header {
   margin-right: 10px;
 }
 
-.searchbar input {
+.searchbar input[type=text] {
   flex: 1;
   height: 35px;
   font-family: var(--primary-font);
@@ -61,12 +61,43 @@ header {
   background-color: rgb(240, 240, 240);
 }
 
+.searchbar svg {
+  cursor: pointer;
+}
+
+.searchbar input[type="text"]:focus {
+  background-color: white;
+}
+
+.searchbar:focus-within {
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+}
+
 header h1 {
   font-family: var(--logo-font);
   text-transform: uppercase;
   font-weight: 300;
   justify-self: center;
   padding: 9px 0px;
+  cursor: pointer;
+}
+
+header h1 {
+  font-family: var(--logo-font);
+  text-transform: uppercase;
+  font-weight: 300;
+  justify-self: center;
+  padding: 9px 0px;
+  cursor: pointer;
+}
+
+header h1:hover {
+  height: 58px;
+  box-sizing: border-box;
+  font-size: 35px;
+  transition: font-size 0.1s;
+  
 }
 
 header h1 span {
@@ -84,6 +115,12 @@ button {
   border: none;
   font-family: var(--primary-font);
   font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(195, 195, 195);
+  transform: scale(1.1);
 }
 
 .button_icon {
@@ -96,6 +133,10 @@ button {
   border: none;
 }
 
+.red_button:hover {
+  background-color: rgb(175, 0, 0);
+}
+
 .dropdown {
   border: grey solid 1px;
   border-radius: 50%;
@@ -106,6 +147,7 @@ button {
   align-items: center;
   color: black;
   margin: 0px 13px;
+  cursor: pointer;
 }
 
 .burger_menu {
@@ -135,11 +177,42 @@ article {
   margin-bottom: 5px;
 }
 
+.image_container {
+  position: relative;
+}
+
 article img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 3px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #00000085;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.overlay_text {
+  color: white;
+  font-size: 40px;
+  font-family: var(--logo-font);
+}
+
+.image_container:hover .overlay {
+  opacity: 1;
 }
 
 article > h2,
@@ -149,6 +222,7 @@ article > p {
 
 article h2 {
   font-size: 30px;
+  cursor: pointer;
 }
 
 article .recipe_label {
@@ -163,6 +237,11 @@ article .recipe_label {
   align-items: center;
 }
 
+.recipe_label a {
+  text-decoration: none;
+  color: black;
+}
+
 .recipe_label strong{
   font-size: 35px;
 }
@@ -172,6 +251,12 @@ article .recipe_label {
   border: 1px solid grey;
   padding: 3px;
   width: 60px;
+  cursor: pointer;
+}
+
+.user_image:hover {
+  width: 65px;
+  transition: width 0.2s;
 }
 
 .subtle {
@@ -258,6 +343,7 @@ article nav {
   height: 270px;
   object-fit: cover;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .article_title {
@@ -275,6 +361,11 @@ article nav {
   align-items: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.article_title:hover {
+  background-color: rgba(0, 0, 0, 0.459);
+  cursor: pointer;
 }
 
 .tile_info {
@@ -372,6 +463,10 @@ footer li {
     display: none;
   }
 
+  .searchbar:focus-within {
+    border: 1px solid rgb(255, 255, 255);
+  }
+
   .burger_menu {
   display: flex;
   justify-content: center;
@@ -387,13 +482,17 @@ footer li {
     font-size: 25px;
   }
 
+  .overlay_text {
+    font-size: 30px;
+  }
+
   article section {
     margin: 35px 3vw 20px 3vw;
     font-family: var(--reading-font);
   }
 
   .footer_menu {
-    display: flex;
+    display: flex;rgba(0, 0, 0, 0.561)
     flex-direction: column;
     padding-top: 10px;
   }
