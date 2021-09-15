@@ -133,7 +133,8 @@ article img {
   border-radius: 3px;
 }
 
-article > h2, p {
+article > h2, article >
+p {
   text-align: center;
 }
 
@@ -196,7 +197,7 @@ article nav {
   width: 100%;
 }
 
-.recommendations h4{
+.recommendations h4 {
   font-size: 20px;
 }
 
@@ -207,7 +208,7 @@ article nav {
   grid-gap: 1.5rem;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 6vw;
 }
 
 .recommendations_tile {
@@ -263,3 +264,58 @@ article nav {
   font-size: 20px;
 }
 
+footer {
+  background-color: rgb(231, 231, 231);
+  padding: 28px 5vw;
+}
+
+.footer_menu {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 0px 5vw 30px 5vw;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.footer_menu_lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_menu_lists p {
+  margin: 8px 0px;
+}
+
+.download_app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+}
+.download_app p {
+  font-size: 15px;
+  color: rgb(61, 61, 61);
+}
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: grey;
+}
+
+footer li {
+  margin: 8px 0px;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 15px;
+  color: grey;
+}
