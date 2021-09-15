@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind&family=IBM+Plex+Sans+Arabic:wght@300&family=Merriweather+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind&family=IBM+Plex+Sans+Arabic:wght@300&family=Merriweather+Sans:wght@300;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,6 +11,7 @@
 :root {
   --primary-font: "Heebo", sans-serif;
   --logo-font: "Merriweather Sans", sans-serif;
+  --reading-font: 'Inter', sans-serif;
 }
 
 body,
@@ -62,6 +65,7 @@ header h1 {
   text-transform: uppercase;
   font-weight: 300;
   justify-self: center;
+  padding: 9px 0px;
 }
 
 header h1 span {
@@ -103,6 +107,10 @@ button {
   margin: 0px 13px;
 }
 
+.burger_menu {
+  display: none;
+}
+
 header nav {
   display: flex;
   justify-content: center;
@@ -133,9 +141,13 @@ article img {
   border-radius: 3px;
 }
 
-article > h2, article >
-p {
+article > h2,
+article > p {
   text-align: center;
+}
+
+article h2 {
+  font-size: 30px;
 }
 
 article .recipe_label {
@@ -150,6 +162,21 @@ article .recipe_label {
   align-items: center;
 }
 
+.recipe_label strong{
+  font-size: 35px;
+}
+
+.user_image {
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 3px;
+  width: 60px;
+}
+
+.subtle {
+  color: grey;
+}
+
 .middle_p {
   border-left: 1px solid rgb(240, 240, 240);
   border-right: 1px solid rgb(240, 240, 240);
@@ -157,6 +184,7 @@ article .recipe_label {
 
 section {
   margin: 35px 0px 20px 0px;
+  font-family: var(--reading-font);
 }
 
 section h3 {
@@ -182,6 +210,7 @@ section ul {
 
 section li {
   margin: 5px 0px;
+  padding: 5px 0px;
   font-size: 15px;
 }
 
@@ -208,7 +237,7 @@ article nav {
   grid-gap: 1.5rem;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6vw;
+  margin-bottom: 2vw;
 }
 
 .recommendations_tile {
@@ -267,6 +296,7 @@ article nav {
 footer {
   background-color: rgb(231, 231, 231);
   padding: 28px 5vw;
+  margin-top: 5vw;
 }
 
 .footer_menu {
@@ -281,6 +311,7 @@ footer {
 .footer_menu_lists {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .footer_menu_lists p {
@@ -301,6 +332,7 @@ footer {
 footer nav {
   display: flex;
   flex-direction: column;
+  margin: 20px 20px 0px 20px;
 }
 
 footer ul {
@@ -319,3 +351,47 @@ footer li {
   font-size: 15px;
   color: grey;
 }
+
+@media only screen and (max-width: 900px) {
+  header {
+  }
+
+  .searchbar {
+    background-color: transparent;
+  }
+
+  .searchbar input,
+  header button,
+  .dropdown {
+    display: none;
+  }
+
+  .burger_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2vw;
+  }
+
+  article {
+    width: 90vw;
+  }
+
+  .footer_menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .download_app {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+}
+
+/* @media only screen and (min-width: 941px) and (max-width: 1465px) {
+  main {
+    background-color: turquoise;
+  }
+} */
